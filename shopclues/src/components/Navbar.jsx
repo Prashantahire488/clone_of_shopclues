@@ -16,9 +16,48 @@ const Navbar = () => {
           <div>
               <a className='sign_up' href=''>Sign Up</a>
           </div>
-      </nav><div>
+      </nav>
+<div className='nav1'>
+      <div className='nav2'>
 
-          </div></>
+          <div>
+              <img className='nav_img' src='https://images.shopclues.com/images/ui/madeinindia.png'></img>
+          </div>
+          <div className='dropdown'>
+              <a>MOBILES & MORE</a>
+              <div class="dropdown-content">
+              <p>Hello World!</p>
+  </div>
+          </div>
+          <div><a>MEN</a></div>
+          <div><a>WOMEN</a></div>
+          <div><a>HOME & KITCHEN</a></div>
+          <div><a>APPLIANCES</a></div>
+          <div><a>SPORTS & MORE</a></div>
+          <div><a>ESSENTIALS</a></div>
+          <div><a>OFFERS</a></div>
+          <div><a>GLOBLE SHOPPING</a></div>
+
+          
+      </div>
+      </div>
+
+
+      <div className='nav3'>
+
+          <div><a>Time Sales</a></div>
+          <div><a>Flu Care</a></div>
+          <div><a>Food & Beverage</a></div>
+          <div><a>Personal Hygiene</a></div>
+          <div><a>Home Cleaning</a></div>
+          <div><a>Nutrition & Supplements</a></div>
+          <div><a>Kitchen & Dining</a></div>
+          <div><a>Refurbished Mobiles</a></div>
+          <div><a>Mobile Accessories</a></div>
+
+          
+      </div>
+      </>
      
      
 )
