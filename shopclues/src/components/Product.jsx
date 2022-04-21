@@ -8,17 +8,20 @@ function Product() {
   {
     fetch("http://localhost:3001/data").then((res)=>
     {
-      return res;
+      return res.json();
     }).then((data)=>
     {
-      console.log(data);
+
+      let data1=data;
+      //console.log(data);
+      //console.log(data1)
+      setUser(data1);
     });
   }
-  useEffect(
-    ()=>
+  useEffect( ()=>
     {
       fetchData();
-    }
+    },[]
   )
   return (
     <div>
