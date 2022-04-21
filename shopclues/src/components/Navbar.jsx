@@ -26,25 +26,32 @@ const Navbar = () => {
           <div className='dropdown'>
               <a>MOBILES & MORE</a>
               <div class="dropdown-content">
-              <p>Hello World!</p>
-  </div>
+              <p>Mobile</p>
           </div>
-          <div><a>MEN</a></div>
-          <div><a>WOMEN</a></div>
+        </div>
+        <div className='dropdown'>
+              <a>Men</a>
+              <div class="dropdown-content">
+              <p>Men</p>
+          </div>
+        </div>
+        <div className='dropdown'>
+              <a>Women</a>
+              <div class="dropdown-content">
+              <p>Women</p>
+          </div>
+        </div>
           <div><a>HOME & KITCHEN</a></div>
           <div><a>APPLIANCES</a></div>
           <div><a>SPORTS & MORE</a></div>
           <div><a>ESSENTIALS</a></div>
           <div><a>OFFERS</a></div>
-          <div><a>GLOBLE SHOPPING</a></div>
-
-          
+          <div><a>GLOBLE SHOPPING</a></div>   
       </div>
       </div>
 
 
       <div className='nav3'>
-
           <div><a>Time Sales</a></div>
           <div><a>Flu Care</a></div>
           <div><a>Food & Beverage</a></div>
@@ -54,8 +61,6 @@ const Navbar = () => {
           <div><a>Kitchen & Dining</a></div>
           <div><a>Refurbished Mobiles</a></div>
           <div><a>Mobile Accessories</a></div>
-
-          
       </div>
       </>
      
