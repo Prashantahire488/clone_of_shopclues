@@ -1,19 +1,104 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "data": [
+       {"id": 1,"Title": "Venerate Headphone Stand Headset Holder Earphone Stand with Aluminum Supporting Bar (Black)", "price": 299,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115246/200/200/152689876-115246212-1631016838.jpg","discount":"85","priceoff":"₹1999","category":"Deals_of_the_Day"},
+       {"id": 2,"Title": "google", "price": 220,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108524/200/200/150349620-108524016-1632981770.jpg","discount":"45","priceoff":"₹399","category":"Deals_of_the_Day"},
+       {"id": 3,"Title": "google", "price": 719,"img_url":"https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1648208928.jpg","discount":"28","priceoff":"₹999","category":"Deals_of_the_Day"},
+       {"id": 4,"Title": "google", "price": 199,"img_url":"https://cdn.shopclues.com/images/thumbnails/85225/200/200/128902274AUXAuxiliaryJackfontbCablebfontfontb35mmbfontBraidedMale1506401718.jpg","discount":"33","priceoff":"₹299","category":"Deals_of_the_Day"},
+       {"id": 5,"Title": "google", "price": 379,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115737/200/200/152853766-115737455-1637323013.jpg","discount":"85","priceoff":"₹2499","category":"Deals_of_the_Day"},
+       {"id": 6,"Title": "google", "price": 349,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115652/200/200/152818787-115652926-1634727857.jpg","discount":"24","priceoff":"₹459","category":"Deals_of_the_Day"},
+       {"id": 7,"Title": "google", "price": 342,"img_url":"https://cdn.shopclues.com/images1/thumbnails/99370/200/200/145508146-99370521-1634810951.jpg","discount":"89","priceoff":"₹2999","category":"Your Gadgets Store"},
+       {"id": 8,"Title": "google", "price": 342,"img_url":"https://cdn.shopclues.com/images1/thumbnails/95357/200/200/142826933-95357827-1606398228.jpg","discount":"89","priceoff":"₹2999","category":"Your Gadgets Store"},
+       {"id": 9,"Title": "google", "price": 299,"img_url":"https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1648208928.jpg","discount":"73","priceoff":"₹1099","category":"Your Gadgets Store"},
+       {"id": 10,"Title": "google", "price": 719,"img_url":"https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1648729070.jpg","discount":"28","priceoff":"₹999","category":"Your Gadgets Store"},
+       {"id": 11,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/81476/200/200/135627858-81476269-1648208928.jpg","discount":"75","priceoff":"₹599","category":"Your Gadgets Store"},
+       {"id": 12,"Title": "google", "price": 719,"img_url":"https://cdn.shopclues.com/images1/thumbnails/112883/200/200/151860087-112883707-1648729070.jpg","discount":"28","priceoff":"₹999","category":"Your Gadgets Store"},
+   
+       {"id": 13,"Title": "google", "price": 49,"img_url":"https://cdn.shopclues.com/images1/thumbnails/105589/280/1/149278210-105589660-1585251645.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+       {"id": 14,"Title": "google", "price": 99,"img_url":"https://cdn.shopclues.com/images1/thumbnails/105589/320/1/149278289-105589933-1585251885.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+       {"id": 15,"Title": "google", "price": 49,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+       {"id": 16,"Title": "google", "price": 49,"img_url":"https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+       {"id": 17,"Title": "google", "price": 49,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104441/280/1/148788228-104441348-1578472379.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+       {"id": 18,"Title": "google", "price": 49,"img_url":"https://cdn.shopclues.com/images1/thumbnails/105520/280/1/149254102-105520442-1584863770.jpg","discount":"","priceoff":"","category":"Daily_Essentials"},
+
+       {"id": 19,"Title": "google", "price": 89,"img_url":"https://gd.image-gmkt.com/li/854/296/1659296854.g_800-w-st_g.jpg","discount":"64","priceoff":"₹250","category":"Daily_Essentials"},
+       {"id": 20,"Title": "google", "price": 249,"img_url":"https://gd.image-gmkt.com/li/413/969/1675969413.g_800-w-st_g.jpg","discount":"75","priceoff":"₹999","category":"Daily_Essentials"},
+       {"id": 21,"Title": "google", "price": 179,"img_url":"https://gd.image-gmkt.com/li/592/566/1674566592.g_800-w-st_g.jpg","discount":"88","priceoff":"₹1499","category":"Daily_Essentials"},
+       {"id": 22,"Title": "google", "price": 69,"img_url":"https://gd.image-gmkt.com/li/660/643/1653643660.g_800-w-st_g.jpg","discount":"799","priceoff":"₹799","category":"Daily_Essentials"},
+       {"id": 23,"Title": "google", "price": 179,"img_url":"https://gd.image-gmkt.com/li/160/047/1702047160.g_800-w-st_g.jpg","discount":"82","priceoff":"₹999","category":"Daily_Essentials"},
+       {"id": 24,"Title": "google", "price": 149,"img_url":"https://gd.image-gmkt.com/li/021/876/1667876021.g_800-w-st_g.jpg","discount":"68","priceoff":"₹460","category":"Daily_Essentials"},
+
+ 
+   
+       {"id": 25,"Title": "google", "price": 89,"img_url":"https://cdn.shopclues.com/images/thumbnails/88912/320/320/131487154GOLDENPEACOCK1512550255.jpg","discount":"64","priceoff":"₹250","category":"Festive_Specials" },
+       {"id": 26,"Title": "google", "price": 249,"img_url":"https://cdn.shopclues.com/images/detailed/41945/HandloomPinkKurta1_1469600960.jpg","discount":"75","priceoff":"₹999","category":"Festive_Specials" },
+       {"id": 27,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images/detailed/85345/129033198_Untitled1copy_1506507048.jpg","discount":"88","priceoff":"₹1499","category":"Festive_Specials" },
+       {"id": 28,"Title": "google", "price": 69,"img_url":"https://cdn.shopclues.com/images/thumbnails/48680/320/320/61SUwF0UAAL1480795166.jpg","discount":"799","priceoff":"₹799","category":"Festive_Specials" },
+       {"id": 29,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images/detailed/85345/129033198_Untitled1copy_1506507048.jpg","discount":"82","priceoff":"₹999","category":"Festive_Specials" },
+       {"id": 30,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images/thumbnails/48680/320/320/61SUwF0UAAL1480795166.jpg","discount":"68","priceoff":"₹460","category":"Festive_Specials" },
+
+   
+   
+       {"id": 31,"Title": "google", "price": 89,"img_url":"https://cdn.shopclues.com/images/thumbnails/78529/200/200/123783677womensvnecksleevelesschiffonpromdress1500360679.jpg","discount":"64","priceoff":"₹250","category":"Trending_Fashion_Zone" },
+       {"id": 32,"Title": "google", "price": 249,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104223/200/200/148695190-104223920-1598444855.jpg","discount":"75","priceoff":"₹999","category":"Trending_Fashion_Zone" },
+       {"id": 33,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/107255/200/200/149878229-107255354-1634817960.jpg","discount":"88","priceoff":"₹1499","category":"Trending_Fashion_Zone" },
+       {"id": 34,"Title": "google", "price": 69,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104223/200/200/148695185-104223914-1603182895.jpg","discount":"799","priceoff":"₹799","category":"Trending_Fashion_Zone" },
+       {"id": 35,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/110871/200/200/151047473-110871442-1601973238.jpg","discount":"82","priceoff":"₹999","category":"Trending_Fashion_Zone" },
+       {"id": 36,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/110871/200/200/151047473-110871442-1601973238.jpg","discount":"68","priceoff":"₹460","category":"Trending_Fashion_Zone" },
+
+   
+ 
+       {"id": 37,"Title": "google", "price": 89,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108803/280/1/150436700-108803780-1596188707.jpg","discount":"64","priceoff":"₹250", "category":"Sports_&_Health"},
+       {"id": 38,"Title": "google", "price": 249,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104507/280/1/148819339-104507472-1579085071.jpg","discount":"75","priceoff":"₹999","category":"Sports_&_Health"},
+       {"id": 39,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images/thumbnails/27595/280/1/11448611056.jpg","discount":"88","priceoff":"₹1499","category":"Sports_&_Health"},
+       {"id": 40,"Title": "google", "price": 69,"img_url":"https://cdn.shopclues.com/images1/thumbnails/103419/280/1/148130677-103419160-1571212818.jpg","discount":"799","priceoff":"₹799","category":"Sports_&_Health"},
+       {"id": 41,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/95250/280/1/142772233-95250978-1544273464.jpg","discount":"82","priceoff":"₹999","category":"Sports_&_Health"},
+       {"id": 42,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/107160/280/1/149847355-107160132-1590790597.jpg","discount":"68","priceoff":"₹460","category":"Sports_&_Health"},
+   
+   
+       {"id": 43,"Title": "google", "price": 89,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104122/280/1/148627878-104122294-1577180435.jpg","discount":"64","priceoff":"₹250","category":"Brand_Store"},
+       {"id": 44,"Title": "google", "price": 249,"img_url":"https://cdn.shopclues.com/images1/thumbnails/104461/280/1/148797859-104461120-1578647077.jpg","discount":"75","priceoff":"₹999","category":"Brand_Store"},
+       {"id": 45,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/109822/280/1/150760050-109822495-1600850631.jpg","discount":"88","priceoff":"₹1499","category":"Brand_Store"},
+       {"id": 46,"Title": "google", "price": 69,"img_url":"https://cdn.shopclues.com/images/thumbnails/34620/280/1/902417708981309282209372miltonwaterbottleset1434449243144186494711454507692145672090914577949341459228900.jpg","discount":"799","priceoff":"₹799","category":"Brand_Store"},
+       {"id": 47,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108976/320/1/150501198-108976885-1596612884.jpg","discount":"82","priceoff":"₹999","category":"Brand_Store"},
+       {"id": 48,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/109013/280/1/150523151-109013699-1603186269.jpg","discount":"68","priceoff":"₹460","category":"Brand_Store"},
+
+   
+   
+       {"id": 49,"Title": "google", "price": 89,"img_url":"https://cdn.shopclues.com/images1/thumbnails/112739/200/200/151799461-112739507-1609852163.jpg","discount":"64","priceoff":"₹250","category":"Branded_Deals"},
+       {"id": 50,"Title": "google", "price": 249,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115770/200/200/152865327-115770032-1638266835.jpg","discount":"75","priceoff":"₹999","category":"Branded_Deals"},
+       {"id": 51,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/101449/200/200/146972107-101449020-1561570862.jpg","discount":"88","priceoff":"₹1499","category":"Branded_Deals"},
+       {"id": 52,"Title": "google", "price": 69,"img_url":"https://cdn.shopclues.com/images1/thumbnails/114233/200/200/152310615-114233377-1621542810.jpg","discount":"799","priceoff":"₹799","category":"Branded_Deals"},
+       {"id": 53,"Title": "google", "price": 179,"img_url":"https://cdn.shopclues.com/images1/thumbnails/107255/200/200/149878229-107255354-1634817960.jpg","discount":"82","priceoff":"₹999","category":"Branded_Deals"},
+       {"id": 54,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115808/200/200/152878340-115808533-1639569540.jpg","discount":"68","priceoff":"₹460","category":"Branded_Deals"}
+   
+   
+   ],
+
+   "Men":[{"id": 1,"Title": "29K Men Black Round", "price": 199,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108508/280/1/150343301-108508936-1595055359.jpg","discount":"60","priceoff":"₹499","category":"T-shirt"},
+   {"id": 2,"Title": "Odoky Men's White", "price": 299,"img_url":"https://cdn.shopclues.com/images1/thumbnails/114604/280/1/152490261-114604642-1625652921.jpg","discount":"70","priceoff":"₹999","category":"T-shirt"},
+   {"id": 3,"Title": "M Mapon Fashion", "price": 148,"img_url":"https://cdn.shopclues.com/images1/thumbnails/116041/280/1/152930914-116041723-1644316641.jpg","discount":"81","priceoff":"₹799","category":"T-shirt"},
+   {"id": 4,"Title": "Odoky Axxitude Men", "price": 399,"img_url":"https://cdn.shopclues.com/images1/thumbnails/102815/280/1/147840447-102815891-1568785088.jpg","discount":"64","priceoff":"₹399","category":"T-shirt"},
+   {"id": 5,"Title": "Men Maroon Henley", "price": 239,"img_url":"https://cdn.shopclues.com/images1/thumbnails/103441/280/1/148147116-103441442-1571424977.jpg","discount":"70","priceoff":"₹799","category":"T-shirt"},
+
+   {"id": 6,"Title": "Urbano Fashion Men Grey", "price": 859,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108508/280/1/150343301-108508936-1595055359.jpg","discount":"60","priceoff":"₹1499","category":"Jeans"},
+   {"id": 7,"Title": "Urbano Fashion Men Grey", "price": 739,"img_url":"https://cdn.shopclues.com/images1/thumbnails/114604/280/1/152490261-114604642-1625652921.jpg","discount":"1","priceoff":"₹749","category":"Jeans"},
+   {"id": 8,"Title": "Urbano Fashion Men's Dark", "price": 675,"img_url":"https://cdn.shopclues.com/images1/thumbnails/116041/280/1/152930914-116041723-1644316641.jpg","discount":"58","priceoff":"₹199","category":"Jeans"},
+   {"id": 9,"Title": "Urbano Fashion Men Stretchar", "price": 669,"img_url":"https://cdn.shopclues.com/images1/thumbnails/102815/280/1/147840447-102815891-1568785088.jpg","discount":"44","priceoff":"₹1199","category":"Jeans"},
+   {"id": 10,"Title": "Urbano Fashion Men's Light", "price": 649,"img_url":"https://cdn.shopclues.com/images1/thumbnails/103441/280/1/148147116-103441442-1571424977.jpg","discount":"57","priceoff":"₹1499","category":"Jeans"},
+
+   {"id": 11,"Title": "Brainbell Tagover", "price": 844,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009993-113240684-1613590361.jpg","discount":"70","priceoff":"₹2798","category":"Casual-shirt"},
+   {"id": 12,"Title": "Brainbell Tagover", "price": 498,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009990-113240672-1613589994.jpg","discount":"64","priceoff":"₹1399","category":"Casual-shirt"},
+   {"id": 13,"Title": "Brainbell Solid Casual", "price": 539,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009975-113240644-1613588361.jpg","discount":"61","priceoff":"₹1399","category":"Casual-shirt"},
+   {"id": 14,"Title": "BRAINBELL Men's", "price": 539,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009971-113240633-1613588039.jpg","discount":"61","priceoff":"₹1399","category":"Casual-shirt"},
+   {"id": 15,"Title": "Royal Fashion Dotted ", "price": 499,"img_url":"https://cdn.shopclues.com/images1/thumbnails/88017/280/1/138854428-88017481-1527669982.jpg","discount":"58","priceoff":"₹1199","category":"Casual-shirt"},
+
+   {"id": 16,"Title": "Frankline White Cotton", "price": 444,"img_url":"https://cdn.shopclues.com/images1/thumbnails/109500/280/1/150659652-109500878-1599620984.jpg","discount":"66","priceoff":"₹1299","category":"Formal-shirt"},
+   {"id": 17,"Title": "Tangy men's printed", "price": 599,"img_url":"https://cdn.shopclues.com/images1/thumbnails/101966/280/1/147338085-101966907-1638009888.jpg","discount":"40","priceoff":"₹999","category":"Formal-shirt"},
+   {"id": 18,"Title": "Club Morocco Mens", "price": 899,"img_url":"https://cdn.shopclues.com/images/thumbnails/26373/280/1/578702NOCODE11445354918.jpg","discount":"64","priceoff":"₹2499","category":"Formal-shirt"},
+   {"id": 19,"Title": "Shuttal Fab White", "price": 700,"img_url":"https://cdn.shopclues.com/images/thumbnails/37118/280/1/897971462948075.jpg","discount":"42","priceoff":"₹1199","category":"Formal-shirt"},
+   {"id": 20,"Title": "Akaas Pink Full", "price": 249,"img_url":"https://cdn.shopclues.com/images/thumbnails/61142/280/1/DekartDpink21488861192.jpg","discount":"77","priceoff":"₹1599","category":"Formal-shirt"}
+   ]
 }
+
+
+
