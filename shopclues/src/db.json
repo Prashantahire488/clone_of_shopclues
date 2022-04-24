@@ -72,9 +72,33 @@
         {"id": 54,"Title": "google", "price": 149,"img_url":"https://cdn.shopclues.com/images1/thumbnails/115808/200/200/152878340-115808533-1639569540.jpg","discount":"68","priceoff":"₹460","category":"Branded_Deals"}
     
     
-    ]
+    ],
 
- 
+    "Men":[{"id": 1,"Title": "29K Men Black Round", "price": 199,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108508/280/1/150343301-108508936-1595055359.jpg","discount":"60","priceoff":"₹499","category":"T-shirt"},
+    {"id": 2,"Title": "Odoky Men's White", "price": 299,"img_url":"https://cdn.shopclues.com/images1/thumbnails/114604/280/1/152490261-114604642-1625652921.jpg","discount":"70","priceoff":"₹999","category":"T-shirt"},
+    {"id": 3,"Title": "M Mapon Fashion", "price": 148,"img_url":"https://cdn.shopclues.com/images1/thumbnails/116041/280/1/152930914-116041723-1644316641.jpg","discount":"81","priceoff":"₹799","category":"T-shirt"},
+    {"id": 4,"Title": "Odoky Axxitude Men", "price": 399,"img_url":"https://cdn.shopclues.com/images1/thumbnails/102815/280/1/147840447-102815891-1568785088.jpg","discount":"64","priceoff":"₹399","category":"T-shirt"},
+    {"id": 5,"Title": "Men Maroon Henley", "price": 239,"img_url":"https://cdn.shopclues.com/images1/thumbnails/103441/280/1/148147116-103441442-1571424977.jpg","discount":"70","priceoff":"₹799","category":"T-shirt"},
+
+    {"id": 6,"Title": "Urbano Fashion Men Grey", "price": 859,"img_url":"https://cdn.shopclues.com/images1/thumbnails/108508/280/1/150343301-108508936-1595055359.jpg","discount":"60","priceoff":"₹1499","category":"Jeans"},
+    {"id": 7,"Title": "Urbano Fashion Men Grey", "price": 739,"img_url":"https://cdn.shopclues.com/images1/thumbnails/114604/280/1/152490261-114604642-1625652921.jpg","discount":"1","priceoff":"₹749","category":"Jeans"},
+    {"id": 8,"Title": "Urbano Fashion Men's Dark", "price": 675,"img_url":"https://cdn.shopclues.com/images1/thumbnails/116041/280/1/152930914-116041723-1644316641.jpg","discount":"58","priceoff":"₹199","category":"Jeans"},
+    {"id": 9,"Title": "Urbano Fashion Men Stretchar", "price": 669,"img_url":"https://cdn.shopclues.com/images1/thumbnails/102815/280/1/147840447-102815891-1568785088.jpg","discount":"44","priceoff":"₹1199","category":"Jeans"},
+    {"id": 10,"Title": "Urbano Fashion Men's Light", "price": 649,"img_url":"https://cdn.shopclues.com/images1/thumbnails/103441/280/1/148147116-103441442-1571424977.jpg","discount":"57","priceoff":"₹1499","category":"Jeans"},
+
+    {"id": 11,"Title": "Brainbell Tagover", "price": 844,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009993-113240684-1613590361.jpg","discount":"70","priceoff":"₹2798","category":"Casual-shirt"},
+    {"id": 12,"Title": "Brainbell Tagover", "price": 498,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009990-113240672-1613589994.jpg","discount":"64","priceoff":"₹1399","category":"Casual-shirt"},
+    {"id": 13,"Title": "Brainbell Solid Casual", "price": 539,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009975-113240644-1613588361.jpg","discount":"61","priceoff":"₹1399","category":"Casual-shirt"},
+    {"id": 14,"Title": "BRAINBELL Men's", "price": 539,"img_url":"https://cdn.shopclues.com/images1/thumbnails/113240/280/1/152009971-113240633-1613588039.jpg","discount":"61","priceoff":"₹1399","category":"Casual-shirt"},
+    {"id": 15,"Title": "Royal Fashion Dotted ", "price": 499,"img_url":"https://cdn.shopclues.com/images1/thumbnails/88017/280/1/138854428-88017481-1527669982.jpg","discount":"58","priceoff":"₹1199","category":"Casual-shirt"},
+
+    {"id": 16,"Title": "Frankline White Cotton", "price": 444,"img_url":"https://cdn.shopclues.com/images1/thumbnails/109500/280/1/150659652-109500878-1599620984.jpg","discount":"66","priceoff":"₹1299","category":"Formal-shirt"},
+    {"id": 17,"Title": "Tangy men's printed", "price": 599,"img_url":"https://cdn.shopclues.com/images1/thumbnails/101966/280/1/147338085-101966907-1638009888.jpg","discount":"40","priceoff":"₹999","category":"Formal-shirt"},
+    {"id": 18,"Title": "Club Morocco Mens", "price": 899,"img_url":"https://cdn.shopclues.com/images/thumbnails/26373/280/1/578702NOCODE11445354918.jpg","discount":"64","priceoff":"₹2499","category":"Formal-shirt"},
+    {"id": 19,"Title": "Shuttal Fab White", "price": 700,"img_url":"https://cdn.shopclues.com/images/thumbnails/37118/280/1/897971462948075.jpg","discount":"42","priceoff":"₹1199","category":"Formal-shirt"},
+    {"id": 20,"Title": "Akaas Pink Full", "price": 249,"img_url":"https://cdn.shopclues.com/images/thumbnails/61142/280/1/DekartDpink21488861192.jpg","discount":"77","priceoff":"₹1599","category":"Formal-shirt"}
+    ]
 }
+
 
 

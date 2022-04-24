@@ -1,7 +1,19 @@
-import React from 'react'
-import './style/Navbar.css';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+import './style/Navbar.css';
+import { useEffect, useState } from "react";
+
+const Navbar = (props) => {
+
+    const navigate = useNavigate();
+    const [data,setData] = useState([]);
+         
+
+    const NavigateHome = () =>
+    {        
+        navigate("/");
+    } 
   return (
      <><nav>
           <div>
@@ -10,11 +22,11 @@ const Navbar = () => {
 
 
           <div>
-              <input className='search_bar' type="text" placeholder='What is on your mind Today?' />
+              <input className='search_bar' type="text" placeholder='What is on your mind Today?' onChange={(e) => props.searchd(e.target.value)} />
               <button className='btn_search'>Search</button>
           </div>
           <div>
-              <a className='sign_up' href=''>Sign Up</a>
+          <img className='cart_img' onClick={() => navigate("/Cart")} src="https://www.freeiconspng.com/uploads/shopping-cart-icon-30.png" />
           </div>
       </nav>
 <div className='nav1'>
@@ -23,12 +35,7 @@ const Navbar = () => {
           <div>
               <img className='nav_img' src='https://images.shopclues.com/images/ui/madeinindia.png'></img>
           </div>
-          <div className='dropdown'>
-              <a>MOBILES & MORE</a>
-              <div class="dropdown-content">
-              <p>Mobile</p>
-          </div>
-        </div>
+       
         <div className='dropdown'>
               <a>Men</a>
               <div class="dropdown-content">
@@ -64,8 +71,6 @@ const Navbar = () => {
       </div>
       </>
      
-     
-)
-}
+  )}
 
 export {Navbar} ;
