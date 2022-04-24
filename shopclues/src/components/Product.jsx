@@ -9,7 +9,7 @@ function Product() {
 
   const fetchData=()=>
   {
-    fetch("http://localhost:3001/data").then((res)=>
+    fetch("https://shopcluesdb.herokuapp.com/data").then((res)=>
     {
       return res.json();
     }).then((data)=>

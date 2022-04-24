@@ -19,7 +19,7 @@ function Men() {
   }
   const fetchData=()=>
   {
-    fetch("http://localhost:3001/Men").then((res)=>
+    fetch("https://shopcluesdb.herokuapp.com/Men").then((res)=>
     {
       return res.json();
     }).then((data)=>
