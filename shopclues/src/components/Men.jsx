@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
 import './style/Men.css';
 import {Navbar} from "./Navbar";
 import {Footer} from "./footer";
@@ -11,7 +11,7 @@ import {Footer} from "./footer";
 const Men=()=> {
 
    const [user,setUser]=useState([]);
-  // const [value,setValue] = useState([]);
+  const [value,setValue] = useState([]);
    const [val,setVal] = useState("");
   // const dispatch = useDispatch();
 
@@ -35,6 +35,14 @@ const Men=()=> {
     },[]
   )
 
+ 
+
+  const lowToHigh=()=>{
+    Men.sort((a,b)=>a.price-b.price)
+  }
+  const highToLow=()=>{
+    Men.sort((a,b)=>b.price-a.price)
+  }
   // const data = useSelector((state) => state.Data.data);
   
   // const CartData = useSelector((state) => state.Cart.cart);
@@ -61,28 +69,28 @@ const Men=()=> {
 //     alert("Product Added into the cart")
 //   }
 
-  // const sortBylow =(x) => {
-  //   if(x==="l"){
-  //    let res = data.sort((a,b) => a.price - b.price)
-  //    setValue([...res])
-  //   }else if( x==="h"){
-  //     let res = data.sort((a,b) => b.price - a.price)
-  //     setValue([...res])
-  //   }
+  const sortBylow =(x) => {
+    if(x==="l"){
+     let res = user.sort((a,b) => a.price - b.price)
+     setValue([...res])
+    }else if( x==="h"){
+      let res = user.sort((a,b) => b.price - a.price)
+      setValue([...res])
+    }
     
-  //   }
+    }
 
   return (
     <>    
     
- 
+    <Navbar/>
 <div id="mainsection">
-<Navbar/>
+    
             <div id="leftsection">
 
             <h4>FILTER</h4>
-            <button >High to low</button>
-            <button >Low to high</button>
+            <button onClick= {() => {sortBylow("l")} }>High to low</button>
+            <button onClick= {() => {sortBylow("h")} } >Low to high</button>
                 <h4>CATEGORY</h4>
             <button onClick={() => {setVal("T-shirt")}}>T-Shirt</button>
             <button onClick={() => {setVal("Jeans")}}>Jeans</button>
