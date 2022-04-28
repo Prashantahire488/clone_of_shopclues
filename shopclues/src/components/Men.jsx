@@ -77,7 +77,7 @@ const Men=()=> {
     
  
 <div id="mainsection">
-
+<Navbar/>
             <div id="leftsection">
 
             <h4>FILTER</h4>
