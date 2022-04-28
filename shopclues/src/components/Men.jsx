@@ -1,22 +1,20 @@
 import React,{useState,useEffect} from 'react'
-
 import './style/Men.css';
 import {Navbar} from "./Navbar";
 import {Footer} from "./footer";
+// import { useSelector, useDispatch } from 'react-redux'
+// import {addCart} from '../redux/Cart/action';
 
 
+ 
 
-function Men() {
+const Men=()=> {
 
-  const [user,setUser]=useState([]);
-  const [searchdata,setSearchdata] = useState("")
+   const [user,setUser]=useState([]);
+  // const [value,setValue] = useState([]);
+   const [val,setVal] = useState("");
+  // const dispatch = useDispatch();
 
-
-  const searchd = (ele) =>
-  {
-      setSearchdata(ele);
-      console.log(searchdata)
-  }
   const fetchData=()=>
   {
     fetch("https://shopcluesdb.herokuapp.com/Men").then((res)=>
@@ -36,85 +34,63 @@ function Men() {
       fetchData();
     },[]
   )
-let cart=[];
-  if(localStorage.getItem("cart")===null)
-  {
-    localStorage.setItem("cart",JSON.stringify([]));
-  }
-  console.log(localStorage.getItem("cart")===null);
 
-  const updateCart=(Men)=>
-  {
-    let cartData=JSON.parse(localStorage.getItem("cart"));
-    cart=[...cartData,Men];
-    console.log(cart)
+  // const data = useSelector((state) => state.Data.data);
+  
+  // const CartData = useSelector((state) => state.Cart.cart);
+  // console.log(CartData);
 
-    localStorage.setItem("cart",JSON.stringify(cart))
-    alert("Product Added into the cart")
-  }
 
+  // const Send = (e) => {
+  // dispatch(addCart(e))
+  // }
+// let cart=[];
+//   if(localStorage.getItem("cart")===null)
+//   {
+//     localStorage.setItem("cart",JSON.stringify([]));
+//   }
+//   console.log(localStorage.getItem("cart")===null);
+
+//   const updateCart=(Men)=>
+//   {
+//     let cartData=JSON.parse(localStorage.getItem("cart"));
+//     cart=[...cartData,Men];
+//     console.log(cart)
+
+//     localStorage.setItem("cart",JSON.stringify(cart))
+//     alert("Product Added into the cart")
+//   }
+
+  // const sortBylow =(x) => {
+  //   if(x==="l"){
+  //    let res = data.sort((a,b) => a.price - b.price)
+  //    setValue([...res])
+  //   }else if( x==="h"){
+  //     let res = data.sort((a,b) => b.price - a.price)
+  //     setValue([...res])
+  //   }
+    
+  //   }
 
   return (
     <>    
-    <Navbar searchd={searchd} /> 
- <div className="sort">
-                    <select onchange="" id="sortby">
-                        <option value="" disabled selected hidden>Sort By</option>
-                        <option>Relevance</option>
-                        <option>What's New</option>
-                        <option>Price Low to High</option>
-                        <option>Price High to Low</option>
-                        <option>Discount High to Low</option>
-                    </select>           
-                </div>
+    
+ 
 <div id="mainsection">
 
             <div id="leftsection">
-                <h4>Filters</h4>
-            <h4>CATEGORY</h4>
-            <div>
-                <input type="checkbox"  className="checkboxsize"/>
-                <label>T-shirt</label>
-            </div>
-            <div>
-                <input type="checkbox" className="checkboxsize"/>
-                <label>Jeans</label>
-            </div>
-            <div>
-                <input type="checkbox" className="checkboxsize"/>
-                <label>Casual-Shirt</label>
-            </div>
-            <div>
-                <input type="checkbox"  className="checkboxsize"/>
-                <label>Formal-Shirt</label>
-            </div>
+
+            <h4>FILTER</h4>
+            <button >High to low</button>
+            <button >Low to high</button>
+                <h4>CATEGORY</h4>
+            <button onClick={() => {setVal("T-shirt")}}>T-Shirt</button>
+            <button onClick={() => {setVal("Jeans")}}>Jeans</button>
+            <button onClick={() => {setVal("Casual-shirt")}}>Casual Shirt</button>
+            <button onClick={() => {setVal("Formal-shirt")}}>Formal Shirt</button>
+          
         
-            <h4>PRICE RANGE</h4>
-            <div>
-                <input type="checkbox"  className="checkboxsize"/>
-                <label>Rs.200 - 500</label>
-            </div>
-            <div>
-                <input type="checkbox" className="checkboxsize"/>
-                <label>Rs.501 - 900</label>
-            </div>
-            <div>
-                <input type="checkbox"  className="checkboxsize"/>
-                <label>Rs.900 - 2599</label>
-            </div>
-            <h4>DISCOUNT</h4>
-            <div>
-                <input type="checkbox" className="checkboxsize"/>
-                <label>0% - 30%</label>
-            </div>
-            <div>
-                <input type="checkbox"  className="checkboxsize"/>
-                <label>30% - 60%</label>
-            </div>
-            <div>
-                <input type="checkbox" className="checkboxsize"/>
-                <label>60% - 80%</label>
-            </div>
+           
             </div>
           
             <div id="rightsection">
@@ -122,17 +98,19 @@ let cart=[];
    
                 <h6></h6>
         <div className='item-container1'>
-        {user.filter((ele) => {
-                if(searchdata == "" || searchdata== undefined)
+        {user.filter((el) => {
+
+                if(el.category === val)
                 {
-                    return user;
+                  return el.category ===val
                 }
-                else
+                else if(val === "")
                 {
-                    return ele.title.toLowerCase().includes(searchdata.toLowerCase());
+                    return el
                 }
+    
               })
-            .map((Men) => (
+           .map((Men) => (
             <div className='items'>
                 <img src={Men.img_url} alt='' />
                 <p>{Men.Title}</p>
@@ -140,7 +118,7 @@ let cart=[];
                 <p className='priceoff'>{Men.priceoff}</p>
                 <p className='discount'>{Men.discount+"%"+" OFF"}</p>
                 <br/>
-                 <button className='btn_shop'onClick={() => updateCart(Men)}>Add To Cart</button>
+                 <button className='btn_shop'>Add To Cart</button>
             </div>          
             ))}
         </div>
