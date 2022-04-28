@@ -1,10 +1,17 @@
 import React,{useState,useEffect} from 'react';
-//import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './style/Men.css';
 import {Navbar} from "./Navbar";
 import {Footer} from "./footer";
 
-// import {addCart} from '../redux/Cart/action';
+
+import {
+  getDataError,
+  getDataLoading,
+  getDataSuccess,
+} from "../redux/Action";
+
+
 
 
  
@@ -14,64 +21,93 @@ const Men=()=> {
    const [user,setUser]=useState([]);
   const [value,setValue] = useState([]);
    const [val,setVal] = useState("");
+   const[sorting,setSort]=useState("");
+   const [count,setCount] = useState(0);
  //const dispatch = useDispatch();
 
-  const fetchData=()=>
-  {
-    fetch("https://shopcluesdb.herokuapp.com/Men").then((res)=>
-    {
-      return res.json();
-    }).then((data)=>
-    {
+ const dispatch = useDispatch();
+    
+    const { todos} = useSelector((state) => ({
+      todos: state.todos,
+    })
+    );
 
-      let data1=data;
-      console.log(data);
-      //console.log(data1)
-      setUser(data1);
-    });
+    console.log(todos)       
+   
+
+    useEffect(() => {
+        showData()        
+    },[])
+
+
+    const showData = async() => {
+      try{
+          dispatch(getDataLoading());
+          const showdata = await fetch(`https://shopcluesdb.herokuapp.com/Men`)
+          .then((d) => d.json());            
+          dispatch(getDataSuccess(showdata));
+          
+      } catch (err) {
+          dispatch(getDataError(err));
+    }
   }
-  useEffect( ()=>
-    {
-      fetchData();
-    },[]
-  )
+
 
  
 
-  const lowToHigh=()=>{
-    Men.sort((a,b)=>a.price-b.price)
-  }
-  const highToLow=()=>{
-    Men.sort((a,b)=>b.price-a.price)
-  }
   
-let cart=[];
-  if(localStorage.getItem("cart")===null)
-  {
-    localStorage.setItem("cart",JSON.stringify([]));
-  }
-  console.log(localStorage.getItem("cart")===null);
+  
+// let cart=[];
+//   if(localStorage.getItem("cart")===null)
+//   {
+//     localStorage.setItem("cart",JSON.stringify([]));
+//   }
+//   console.log(localStorage.getItem("cart")===null);
 
-  const updateCart=(Men)=>
-  {
-    let cartData=JSON.parse(localStorage.getItem("cart"));
-    cart=[...cartData,Men];
-    console.log(cart)
+//   const addcart=(Men)=>
+//   {
+//     let cartData=JSON.parse(localStorage.getItem("cart"));
+//     cart=[...cartData,Men];
+//     console.log(cart)
 
-    localStorage.setItem("cart",JSON.stringify(cart))
-    alert("Product Added into the cart")
-  }
+//     localStorage.setItem("cart",JSON.stringify(cart))
+//     alert("Product Added into the cart")
+//   }
 
-  const sortBylow =(x) => {
-    if(x==="l"){
-     let res = user.sort((a,b) => a.price - b.price)
-     setValue([...res])
-    }else if( x==="h"){
-      let res = user.sort((a,b) => b.price - a.price)
-      setValue([...res])
+
+const addcart = (product) =>
+    {   
+        var cartdata = JSON.parse(localStorage.getItem("mcart") || "[]");        
+        var c = 0;
+        for(var i=0;i<cartdata.length;i++)
+        {
+            if(product.id == cartdata[i].id)
+            {
+                alert("Product is already in cart");
+                c++;
+            }
+        }
+        if(c == 0)
+        {
+            cartdata.push(product);
+            localStorage.setItem("mcart",JSON.stringify(cartdata));
+            alert("Product Added in Cart...")
+        }
+              
+        console.log(cartdata)
+        // navigate("/cart");
     }
     
+  const sortBylow =(x) => {
+    setSort(x)
+
+    
     }
+
+
+    
+    
+   // console.log(data)
 
   return (
     <>    
@@ -99,7 +135,7 @@ let cart=[];
    
                 <h6></h6>
         <div className='item-container1'>
-        {user.filter((el) => {
+        {todos.filter((el) => {
 
                 if(el.category === val)
                 {
@@ -111,6 +147,18 @@ let cart=[];
                 }
     
               })
+              .sort((a,b) => 
+              {
+                  if(sorting == "l")
+                  {
+                    return a.price - b.price;
+                  }
+                  else if(sorting == "h")
+                  {
+                    return b.price - a.price;
+                  }
+
+              })
            .map((Men) => (
             <div className='items'>
                 <img src={Men.img_url} alt='' />
@@ -119,7 +167,7 @@ let cart=[];
                 <p className='priceoff'>{Men.priceoff}</p>
                 <p className='discount'>{Men.discount+"%"+" OFF"}</p>
                 <br/>
-                 <button className='btn_shop'onClick={() => updateCart(Men)}>Add To Cart</button>
+                 <button className='btn_shop'onClick={() => addcart(Men)}>Add To Cart</button>
             </div>          
             ))}
         </div>

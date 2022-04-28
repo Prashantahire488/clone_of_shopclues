@@ -39,7 +39,7 @@ const Navbar = (props) => {
         <div className='dropdown'>
               <a>Men</a>
               <div class="dropdown-content">
-              <a href='Men.jsx'>Men</a>
+              <a href='Men'>Men</a>
           </div>
         </div>
         <div className='dropdown'>

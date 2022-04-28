@@ -1,60 +1,106 @@
-import React from 'react'
-import {Navbar}  from "./Navbar";
-import {Footer}  from "./footer";
+import { useEffect, useState } from 'react';
 import './style/Cart.css';
+import { Navbar } from "./Navbar";
+import { useNavigate } from 'react-router-dom';
 
-export const Cart=()=>
-{
-    let cartData=JSON.parse(localStorage.getItem("cart"));
-    console.log(cartData);
+export const Cart = () =>
+{   
+    const data = JSON.parse(localStorage.getItem("mcart"))
+    const [value,setValue] = useState({});    
+    const navigate = useNavigate();
 
-    return (
+    var t = 0;
+    data.forEach((el) => t += el.price)
+    console.log(data);
+    const delcart = (product) =>
+    {
+        data.splice(data.findIndex(a => a.id === product.id) , 1)        
+        localStorage.setItem("mcart",JSON.stringify(data));     
+
+        setValue({"msg":"just refresh page"});
+    }    
+
+    
+    var mt = 0;
+    if(t != 0)
+    {
+        mt = 35+t
+        mt = mt.toFixed(2)
+    }
+
+    console.log(data);
+
+    return(
     <>
-    <div>
-        <Navbar/>
-    <div className="hline"></div>
+        <Navbar />
 
-    <div className="cart-mid-top">
-        
-        <div className="cursor"><h3>MY BAG</h3> </div>
-        <p className="hline-mid">
-        </p>
-        <div><p className="txt-lightwt">ORDER SUMMARY </p> </div>
-        <p className="hline-mid"></p>
-        <div><p className="txt-lightwt">PAYMENT</p> </div>
+        <div className='maincart'>     
+            <div className='small-container'>
+                <table>
+                    <tr>
+                        <th className='cartheading'>Product</th>
+                        <th className='cartheading'>Quantity</th>
+                        <th className='cartheading'>Subtotal</th>
+                    </tr>
+                    {data.map((product) => (        
+                        <tr>
+                            <td>
+                                <div className="cart-info">
+                                    <img src={product.img_url} />
+                                    <div>
+                                        <p>{product.Title}</p>                                        
+                                        <br />
+                                        <button onClick={() => delcart(product)} >
+                                            Delete
+                                        </button>                                        
+                                    </div>
+                                </div>
+                                <hr />
+                            </td>
+                            <td><input type={"text"} value={"1"} /> </td>
+                            <td>{"Rs."+product.price}</td>
+                        </tr>
+                    ))}
+                </table>
+                <div className='total-price'>
+                        <table>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>{"Rs. "+t }</td>
+                            </tr>
+                            <tr>
+                                <td>Tax</td>
+                                <td>Rs. 35</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>{"Rs. "+mt}</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+
+            <div>
+                <h4>Add Your Address To Deliver Product</h4>
+                <div>
+                    <div className='address'>
+               <label>Name:</label><input placeholder="Enter Your Name"></input>
+               <label>Email:</label> <input placeholder="Email"></input>
+               <label>Address:</label><textarea placeholder='Address'></textarea>
+               </div>
+    
+                <br /><br />                
+                <strong>Total Amount is {"Rs. "+mt}</strong>      
+                <br /><br />   
+                <button className='cbutton'  onClick={() => navigate("/Payment")}>
+                    Checkout
+                </button>                                        
+            </div>
+        </div>            
     </div>
-     <div className="heading-mid">
         
-     </div>
-     <div>
-         <h1>ITEMS DETAIL</h1>
-         <div id="products">
-          {cartData.map((p)=>
-          {    
-                  <div>
-                      <div>
-                          <img src={p.img_url} alt="p"/>
-                          </div>
-                          <div>
-                              <p>{p.Title}</p>
-                              <p>{p.price}</p>
-                              <p>{p.category}</p>
-                              </div>
-                      </div>
-         
-          })
-        }  
-              
-         </div>
-            
-     </div>
-  
-   
-</div>
 
-            
-    <div><Footer/></div>
+        
 
-
- </>
- )}
+    </>)
+}
