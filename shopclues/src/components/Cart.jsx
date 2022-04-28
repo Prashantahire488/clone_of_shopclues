@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './style/Cart.css';
 import { Navbar } from "./Navbar";
+import { Footer } from "./footer";
 import { useNavigate } from 'react-router-dom';
 
 export const Cart = () =>
@@ -24,7 +25,7 @@ export const Cart = () =>
     var mt = 0;
     if(t != 0)
     {
-        mt = 35+t
+        mt = 40+t
         mt = mt.toFixed(2)
     }
 
@@ -50,7 +51,7 @@ export const Cart = () =>
                                     <div>
                                         <p>{product.Title}</p>                                        
                                         <br />
-                                        <button onClick={() => delcart(product)} >
+                                        <button className='delbutton' onClick={() => delcart(product)} >
                                             Delete
                                         </button>                                        
                                     </div>
@@ -69,8 +70,8 @@ export const Cart = () =>
                                 <td>{"Rs. "+t }</td>
                             </tr>
                             <tr>
-                                <td>Tax</td>
-                                <td>Rs. 35</td>
+                                <td>Shipping</td>
+                                <td>Rs. 40</td>
                             </tr>
                             <tr>
                                 <td>Total</td>
@@ -99,7 +100,9 @@ export const Cart = () =>
         </div>            
     </div>
         
-
+<div>
+    <Footer/>
+</div>
         
 
     </>)
