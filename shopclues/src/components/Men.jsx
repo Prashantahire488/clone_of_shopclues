@@ -1,8 +1,9 @@
 import React,{useState,useEffect} from 'react';
+//import { useSelector, useDispatch } from 'react-redux';
 import './style/Men.css';
 import {Navbar} from "./Navbar";
 import {Footer} from "./footer";
-// import { useSelector, useDispatch } from 'react-redux'
+
 // import {addCart} from '../redux/Cart/action';
 
 
@@ -13,7 +14,7 @@ const Men=()=> {
    const [user,setUser]=useState([]);
   const [value,setValue] = useState([]);
    const [val,setVal] = useState("");
-  // const dispatch = useDispatch();
+ //const dispatch = useDispatch();
 
   const fetchData=()=>
   {
@@ -43,31 +44,23 @@ const Men=()=> {
   const highToLow=()=>{
     Men.sort((a,b)=>b.price-a.price)
   }
-  // const data = useSelector((state) => state.Data.data);
   
-  // const CartData = useSelector((state) => state.Cart.cart);
-  // console.log(CartData);
+let cart=[];
+  if(localStorage.getItem("cart")===null)
+  {
+    localStorage.setItem("cart",JSON.stringify([]));
+  }
+  console.log(localStorage.getItem("cart")===null);
 
+  const updateCart=(Men)=>
+  {
+    let cartData=JSON.parse(localStorage.getItem("cart"));
+    cart=[...cartData,Men];
+    console.log(cart)
 
-  // const Send = (e) => {
-  // dispatch(addCart(e))
-  // }
-// let cart=[];
-//   if(localStorage.getItem("cart")===null)
-//   {
-//     localStorage.setItem("cart",JSON.stringify([]));
-//   }
-//   console.log(localStorage.getItem("cart")===null);
-
-//   const updateCart=(Men)=>
-//   {
-//     let cartData=JSON.parse(localStorage.getItem("cart"));
-//     cart=[...cartData,Men];
-//     console.log(cart)
-
-//     localStorage.setItem("cart",JSON.stringify(cart))
-//     alert("Product Added into the cart")
-//   }
+    localStorage.setItem("cart",JSON.stringify(cart))
+    alert("Product Added into the cart")
+  }
 
   const sortBylow =(x) => {
     if(x==="l"){
@@ -89,8 +82,8 @@ const Men=()=> {
             <div id="leftsection">
 
             <h4>FILTER</h4>
-            <button onClick= {() => {sortBylow("l")} }>High to low</button>
-            <button onClick= {() => {sortBylow("h")} } >Low to high</button>
+            <button onClick= {() => {sortBylow("l")} }>Low To High</button>
+            <button onClick= {() => {sortBylow("h")} } >High To Low</button>
                 <h4>CATEGORY</h4>
             <button onClick={() => {setVal("T-shirt")}}>T-Shirt</button>
             <button onClick={() => {setVal("Jeans")}}>Jeans</button>
@@ -126,14 +119,12 @@ const Men=()=> {
                 <p className='priceoff'>{Men.priceoff}</p>
                 <p className='discount'>{Men.discount+"%"+" OFF"}</p>
                 <br/>
-                 <button className='btn_shop'>Add To Cart</button>
+                 <button className='btn_shop'onClick={() => updateCart(Men)}>Add To Cart</button>
             </div>          
             ))}
         </div>
         </div>
      </div>
-
-           
        <Footer/>
 
     </>

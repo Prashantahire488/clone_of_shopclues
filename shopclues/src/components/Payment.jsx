@@ -91,4 +91,4 @@ const Payment = () => {
   )
 }
 
-export {Payment} 
+export {Payment};

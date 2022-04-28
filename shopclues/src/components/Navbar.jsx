@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './style/Navbar.css';
 import { useEffect, useState } from "react";
@@ -39,7 +39,7 @@ const Navbar = (props) => {
         <div className='dropdown'>
               <a>Men</a>
               <div class="dropdown-content">
-              <p>Men</p>
+              <a href='Men.jsx'>Men</a>
           </div>
         </div>
         <div className='dropdown'>

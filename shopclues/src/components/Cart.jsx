@@ -1,3 +1,4 @@
+import React from 'react'
 import {Navbar}  from "./Navbar";
 import {Footer}  from "./footer";
 import './style/Cart.css';
@@ -57,4 +58,3 @@ export const Cart=()=>
 
  </>
  )}
-    
